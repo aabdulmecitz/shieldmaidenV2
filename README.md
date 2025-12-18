@@ -1,6 +1,6 @@
 # ShieldMaiden - Secure File Sharing System
 
-![Shieldmaiden Logo](/path/to/your/logo.png)
+![Shieldmaiden Logo](https://github.com/aabdulmecitz/shieldmaidenV2/blob/main/logo.png?raw=true)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D16.0.0-brightgreen)](https://nodejs.org)
