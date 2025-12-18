@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  # MongoDB Database
+  mongodb:
+    image: mongo:7.0
+    container_name: keewe-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongodb-data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=keewe
+    networks:
+      - keewe-network
+  
+  # Node.js API
+  api:
+    build: .
+    container_name: keewe-api
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - MONGODB_URI=mongodb://mongodb:27017/keewe
+      - JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
+      - PORT=5000
+    depends_on:
+      - mongodb
+    networks:
+      - keewe-network
+
+volumes:
+  mongodb_data:
+
+networks:
+  keewe-network:
+    driver: bridge

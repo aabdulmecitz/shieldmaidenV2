@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Creepster&family=Dancing+Script:wght@400..700&family=Permanent+Marker&family=Press+Start+2P&family=Sekuya&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Bangers&family=Creepster&family=Dancing+Script:wght@400..700&family=Permanent+Marker&family=Press+Start+2P&family=Sekuya&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --font-logo: "Bangers", sans-serif;
+  --font-404: "BBH Bartle", sans-serif;
+}
